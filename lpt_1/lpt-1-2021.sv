@@ -4,7 +4,6 @@ module top_module(clk, reset, in, out);
     output [2:0] out;  // Modify output width if needed
 
     reg [2:0] out;  // Output register
-    reg [2:0] state_checker;  // Use this reg to check the state
 
     // Local parameters to define the states. You can modify/add states as needed
     localparam Sa = 3'b000, Sb = 3'b001, Sc = 3'b010, Sd = 3'b011, Se = 3'b100;
@@ -49,6 +48,4 @@ module top_module(clk, reset, in, out);
             endcase
         end
     end
-    // Optional: Assign state_checker to current_state for debugging
-    assign state_checker = current_state;
 endmodule
