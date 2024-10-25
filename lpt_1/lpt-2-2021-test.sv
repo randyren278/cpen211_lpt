@@ -27,41 +27,45 @@ module tb_MealyDec;
 
     // Initial stimulus
     initial begin
-        // Initialize signals
-        state = 2'b00;  // Start in State A
-        in = 1'b0;      // Initial input value
-
-        // Apply test case for State A, in = 0 (Expecting out = 3'b111)
-        #10;
+        // Test Case: State A, in = 0 (Expecting out = 3'b111)
+        state = 2'b00; in = 1'b0;
+        #1;  // Small delay for simulation purposes
         check_output(3'b111);
 
-        state = 2'b00;  // Reset state to A
-        in = 1'b1;      // Change input to 1
-        check_output(3'b101);  // Expecting out = 3'b101
+        // Test Case: State A, in = 1 (Expecting out = 3'b101)
+        state = 2'b00; in = 1'b1;
+        #1;
+        check_output(3'b101);
 
-        state = 2'b01;  // Change state to B
-        in = 1'b0;      // Change input to 0
-        check_output(3'b001);  // Expecting out = 3'b001
+        // Test Case: State B, in = 0 (Expecting out = 3'b001)
+        state = 2'b01; in = 1'b0;
+        #1;
+        check_output(3'b001);
 
-        state = 2'b01;  // Reset state to B
-        in = 1'b1;      // Change input to 1
-        check_output(3'b011);  // Expecting out = 3'b011
+        // Test Case: State B, in = 1 (Expecting out = 3'b011)
+        state = 2'b01; in = 1'b1;
+        #1;
+        check_output(3'b011);
 
-        state = 2'b10;  // Change state to C
-        in = 1'b0;      // Change input to 0
-        check_output(3'b000);  // Expecting out = 3'b000
+        // Test Case: State C, in = 0 (Expecting out = 3'b000)
+        state = 2'b10; in = 1'b0;
+        #1;
+        check_output(3'b000);
 
-        state = 2'b10;  // Reset state to C
-        in = 1'b1;      // Change input to 1
-        check_output(3'b100);  // Expecting out = 3'b100
+        // Test Case: State C, in = 1 (Expecting out = 3'b100)
+        state = 2'b10; in = 1'b1;
+        #1;
+        check_output(3'b100);
 
-        state = 2'b11;  // Change state to D
-        in = 1'b0;      // Change input to 0
-        check_output(3'b110);  // Expecting out = 3'b110
+        // Test Case: State D, in = 0 (Expecting out = 3'b110)
+        state = 2'b11; in = 1'b0;
+        #1;
+        check_output(3'b110);
 
-        state = 2'b11;  // Reset state to D
-        in = 1'b1;      // Change input to 1
-        check_output(3'b110);  // Expecting out = 3'b110
+        // Test Case: State D, in = 1 (Expecting out = 3'b110)
+        state = 2'b11; in = 1'b1;
+        #1;
+        check_output(3'b110);
 
         // Finish simulation
         $display("Test complete.");
