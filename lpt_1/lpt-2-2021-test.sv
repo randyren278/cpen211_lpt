@@ -1,9 +1,9 @@
 module tb_MealyDec;
 
     // Declare inputs as regs and outputs as wires
-    reg [1:0] state;   // 2-bit state signal, adjust if the number of states is different
-    reg in;            // 1-bit input signal, modify if the input width changes
-    wire [2:0] out;    // 3-bit output signal, adjust output width if necessary
+    reg [1:0] state;   // 2-bit state signal
+    reg in;            // 1-bit input signal
+    wire [2:0] out;    // 3-bit output signal
 
     // Instantiate the Mealy Decoder module
     MealyDec uut (
@@ -17,10 +17,10 @@ module tb_MealyDec;
         input [2:0] expected_out;  // Expected 3-bit output
         begin
             if (out == expected_out) begin
-                display("PASS: Time = %0t | State = %b | Input = %b | Output = %b", time, state, in, out);
+                $display("PASS: Time = %0t | State = %b | Input = %b | Output = %b", $time, state, in, out);
             end else begin
-                display("FAIL: Time = %0t | State = %b | Input = %b | Expected Output = %b | Got Output = %b",
-                         time, state, in, expected_out, out);
+                $display("FAIL: Time = %0t | State = %b | Input = %b | Expected Output = %b | Got Output = %b",
+                         $time, state, in, expected_out, out);
             end
         end
     endtask
@@ -63,11 +63,8 @@ module tb_MealyDec;
         in = 1'b1;      // Change input to 1
         check_output(3'b110);  // Expecting out = 3'b110
 
-        
-
-
         // Finish simulation
-        display("Test complete.");
-        stop;
+        $display("Test complete.");
+        $stop;
     end
 endmodule
