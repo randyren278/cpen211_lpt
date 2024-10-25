@@ -87,5 +87,3 @@ module tb_top_module;
         $stop;
     end
 endmodule
-
-

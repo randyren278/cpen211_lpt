@@ -26,3 +26,4 @@ module MealyDec(state, in, out);
         endcase
     end
 endmodule
+
