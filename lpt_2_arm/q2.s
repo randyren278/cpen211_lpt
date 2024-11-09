@@ -5,7 +5,7 @@ clunky:
 loop:
     LDR R3, [R0,R2,LSL #2]
     CMP R3, #-1
-    BEQ end
+    BEQ end_loop
 
     LDR R4, [R0,R2,LSL #2] //A[next]
     ADD R4,R4, #1
@@ -31,7 +31,7 @@ nxtmp:
     MOV R2, R3 //next=tmp
     B loop
 
-end:
+end_loop:
     MOV R0, R1 //R0=result  
     MOV PC, LR 
 .global _start
