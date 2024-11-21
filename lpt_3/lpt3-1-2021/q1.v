@@ -5,13 +5,8 @@ module datapath(clk, in, sr, Rn, w, aluop, lt, tsel, bsel, out);
     input [2:0] bsel, tsel;
     output reg [7:0] out;
 
-<<<<<<< HEAD
     reg [7:0] R0, R1, R2, R3, tmp; 
     wire [7:0] Bin, alu_out, tselmux_out, rin;
-=======
-  reg [7:0] R0, R1, R2, R3 tmp;
-  wire [7:0 ] Bin, alu_out, tselmux_out; 
->>>>>>> 16a149d243a2309c19c0ac10eb21c5027ebf2bb8
 
     // Loader Logic
     always @(posedge clk) begin
