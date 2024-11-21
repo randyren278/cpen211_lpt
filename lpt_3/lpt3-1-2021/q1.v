@@ -5,7 +5,7 @@ module datapath(clk, in, sr, Rn, w, aluop, lt, tsel, bsel, out);
     input [2:0] bsel, tsel;
     output reg [7:0] out;
 
-    reg [7:0] R0, R1, R2, R3, tmp;
+    reg [7:0] R0, R1, R2, R3, tmp; 
     wire [7:0] Bin, alu_out, tselmux_out, rin;
 
     // Loader Logic
