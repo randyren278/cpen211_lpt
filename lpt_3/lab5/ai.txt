@@ -1,0 +1,28 @@
+gave chatgpt a copy of regfile_tb.sv and asked the prompt 
+"why doesn't this compile in modelsim"
+"given these can you give me an outline for the start of regfile_tb" 
+
+
+gave chatgpt copy of alu_tb.sv and asked the prompt
+"why doesn't this compile in modelsim"
+"can you fix the code for me" 
+
+gave chatgpt test case 3 in datapath_tb.sv and the prompt
+"what is the error in this code" 
+"can you fix the errors in this code" 
+
+gave chatgpt my shiftercode and asked the prompt 
+"how do i write verilog code for a ASR shift right with the most significant bit preserved given 
+a 16bit output reg and an input case of 2'b11" 
+
+gave chatgpt testcae 4 from the autograder and asked why it wasnt working, also gave a copy of my datapath.sv file
+"this test bench has the correct parameters can you tell me why my code doesnt match them"
+"please rewrite the code to ensure that these two files are compatible iwth eachother"
+
+gave chatgpt copy of lab and partially complete datapaht.sv and asked 
+"can you explain in detail how the loada, loadb, loadc, and loads works with examples" 
+"why do the test benches function in model sim without htese load attributes but it doesnt in quartus" 
+
+gave chatgpt datapath_tb.sv and test case 4 from lab5_autograder and the prompt
+"can you write me more in depth test cases in a similar format to test case 4" 
+

@@ -1,0 +1,26 @@
+gave lab 6 pdf and asked prompt 
+
+"explain how to implement the finite state machine described in this lab 
+with verilog" 
+
+"can you explain what the objective of this lab is step by step and describe in detail 
+specifically the datapath controller" 
+
+provided with alu.sv asked prompt 
+"why does this file fail model sim compilation"
+
+Provided output from a Verilog testbench indicating multiple failed tests related to CPU operations like `SUB`, `MOV`, `ADD`, etc.
+
+Asked the assistant to increase the number of test cases from 10 to t20.
+
+Provided updated testbench output with ten test cases, showing some passed and some failed.
+
+Indicated that failed tests were ongoing and requested the assistant to ask for all code files to identify the source of errors.
+
+Shared the complete Verilog code for `lab6_top.v` and associated modules including `input_iface`, `vDFF`, and `sseg`.
+
+Asked the assistant to walk through testing the code on the DE1-SoC board.
+
+Provided updated testbench output showing six failures out of ten tests.
+
+Asked the assistant to list all previous prompts in summary form without labels or titles for easy copy-pasting.
